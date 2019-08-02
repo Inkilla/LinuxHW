@@ -1,0 +1,3 @@
+curl  https://en.wikipedia.org/wiki/Harry_Potter |grep -o Harry | wc -w
+curl  https://en.wikipedia.org/wiki/Harry_Potter |grep -o Lord | wc -w
+curl  https://en.wikipedia.org/wiki/Harry_Potter |grep -o Hogwarts | wc -w

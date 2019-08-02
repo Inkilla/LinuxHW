@@ -1,0 +1,8 @@
+curl https://en.wikipedia.org/wiki/Harry_Potter | grep -no Harry |wc -w |awk 'BEGIN{print "Harry: "} {print $0}' >> HarryResult.txt |curl https://en.wikipedia.org/wiki/Harry_Potter |grep -no Harry |uniq|awk -F: '{print $1}' >> HarryResult.txt
+
+
+
+curl https://en.wikipedia.org/wiki/Harry_Potter | grep -no Lord |wc -w |awk 'BEGIN{print "Lord: "} {print $0}' >> LordResult.txt |curl https://en.wikipedia.org/wiki/Harry_Potter |grep -no Lord |uniq|awk -F: '{print $1}' >> LordResult.txt
+
+
+curl https://en.wikipedia.org/wiki/Harry_Potter | grep -no Hogwarts |wc -w |awk 'BEGIN{print "Hogwarts: "} {print $0}' >> HogwartsResult.txt |curl https://en.wikipedia.org/wiki/Harry_Potter |grep -no Hogwarts |uniq|awk -F: '{print $1}' >> HogwartsResult.txt
